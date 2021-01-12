@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="error"></div>
+        <form name="myform" action="" method="GET">
+            <label for="fname">First Name</label> <br>
+            <input type="text" id="fname" name="firstname" placeholder="Enter first name">
+            <br>
+            
+            <label for="lname">Last Name</label> <br>
+            <input type="text" id="lname" name="lastname" placeholder="Enter last name">
+            <br>
+            
+            <label for="email">Email</label> <br>
+            <input type="text" id="email" name="mail" placeholder="Enter email">
+            <br>
+            
+            <label for="exp">Experience</label> <br>
+            <select required id="exp" name="experience">
+                <option value = "null"> -- Select an option -- </option>
+                <option value="0">0 years</option>
+                <option value="1-2">1 - 2 years</option>
+                <option value="3-4">3 - 4 years</option>
+                <option value="5+">5+ years</option>
+            </select>
+            <br>
+            
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <style>
+        #error {
+            color: red;
+        }
+    </style>
+    
+</body>
+</html>
