@@ -1,0 +1,49 @@
+create primary index idx_primary_cricketdb on cricketdb
+
+insert into cricketdb values (
+ "1", {
+ "name" : "Sachin Tendulkar",
+ "average" : 45,
+ "runs" : 35000 ,
+ "wickets": 6
+})
+
+insert into cricketdb values (
+ "2", {
+ "name" : "Virat Kohli",
+ "average" : 40,
+ "runs" : 22000 ,
+ "wickets": 2
+})
+
+insert into cricketdb values (
+ "3", {
+ "name" : "Rohit Sharma",
+ "average" : 35,
+ "runs" : 18000 ,
+ "wickets": 0
+})
+
+insert into cricketdb values (
+ "4", {
+ "name" : "Hardik Pandya",
+ "average" : 30,
+ "runs" : 4000,
+ "wickets": 18
+})
+
+insert into cricketdb values (
+ "5", {
+ "name" : "Jasprit Bumrah",
+ "average" : 15,
+ "runs" : 450,
+ "wickets": 200
+})
+
+
+select * from cricketdb where runs > 10000;
+
+
+drop index `cricketdb`.`idx_primary_cricketdb`;
+
+create index idx on cricketdb (name);
