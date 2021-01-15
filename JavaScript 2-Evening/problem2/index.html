@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="error"></div>
+
+        <form name="myform" action="" method="GET">
+            <label for="fname">First Name</label> <br>
+            <input type="text" id="fname" name="firstname" placeholder="Enter first name">
+            <br>
+            
+            <label for="lname">Last Name</label> <br>
+            <input type="text" id="lname" name="lastname" placeholder="Enter last name">
+            <br>
+            
+            <label for="email">Email</label> <br>
+            <input type="text" id="email" name="mail" placeholder="Enter email">
+            <br>
+
+            <label for="age">Age</label> <br>
+            <input type="number" id="age" name="age" placeholder="Enter age">
+            <br>
+
+            <label for="dob">Date of birth</label> <br>
+            <input type="date" id="dob" name="dob" placeholder="Enter date of birth">
+            <br>
+
+            <label for="roll">Roll Number</label> <br>
+            <input type="number" id="roll" name="roll" placeholder="Enter rollno">
+            <br>
+            
+            <label for="occ">Occupation</label> <br>
+            <select required id="occ" name="occupation">
+                <option value = "null"> -- Select an option -- </option>
+                <option value="student">Student</option>
+                <option value="self-employed">Self Employed</option>
+                <option value="part-time">Part time job</option>
+                <option value="full-time">Full time job</option>
+            </select>
+            <br>
+            
+            <label >Select Gender</label> <br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <br>
+        <hr>
+        <label for="result">Enter roll number to see details</label> <br>
+        <input type="number" id="result" name="result" placeholder="Enter rollno">
+        <br>
+
+        <input type="button"  onclick=getDetails(result.value) value="Search">
+        <br>
+        <hr>
+        <div id="output"></div>
+    </div>
+
+    <style>
+        #error {
+            color: red;
+        }
+    </style>
+    
+</body>
+</html>

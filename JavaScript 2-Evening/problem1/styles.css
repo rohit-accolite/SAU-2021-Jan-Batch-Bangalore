@@ -1,0 +1,42 @@
+.container {
+    font-family: 'Calibri';
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid rgb(32, 52, 88);
+    border-radius: 20px;
+    background-color: lavenderblush;
+}
+
+.inp {
+    
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: blueviolet;
+    background-color: aliceblue;
+    border-color: blueviolet;
+}
+
+form {
+    text-align: center;
+}
+
+#error {
+    color: red;
+    padding-left: 10px;
+    font-weight: bolder;
+
+}
+
+.result {
+    color: darkcyan;
+    padding-left: 10px;
+    
+    text-align: left;
+    font-size: large;
+    font-weight: bolder;
+}
