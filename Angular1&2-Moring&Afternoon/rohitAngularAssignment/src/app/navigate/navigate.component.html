@@ -1,0 +1,8 @@
+<button id="start" class="clickables"><a id="link" routerLink="">Go Back</a></button>
+<div *ngFor="let todo of todos | slice:0:20; let i = index" class="todos">
+    <!-- <div class="id">{{ i }}</div> -->
+    <div (click)=showTodo(i)>
+        <div id="number">Todo {{ todo.id }}</div><br>
+        <div class="details {{ (todo.display? '' : 'hide') }}">{{ todo.title }}</div><br>
+    </div>
+</div>
