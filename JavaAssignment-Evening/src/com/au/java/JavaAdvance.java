@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class JavaAdvance {
@@ -25,15 +26,13 @@ public class JavaAdvance {
         }
         out.close();
 
-        int readValue = -1;
+        ArrayList<Integer> list = new ArrayList<>();
         int temp;
-        while((temp = in.read()) != -1){
-            readValue = temp;
+        while((temp = in.read()) != -1) {
+            list.add(temp);
         }
-        in.close();
-//        System.out.println(readValue);
 
-        readValue *= 2;
+        int id = list.stream().filter(e -> e%5 == 0).map(e -> e*2).reduce(0, (a, b)-> a+b);
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -46,7 +45,7 @@ public class JavaAdvance {
         String query = "insert into test values (?, ?)";
         PreparedStatement preparedStatement = connection.prepareStatement(query);
 
-        int id = readValue;
+
         String name = "Rohit";
         preparedStatement.setInt(1, id);
         preparedStatement.setString(2, name);
